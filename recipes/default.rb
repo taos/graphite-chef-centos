@@ -11,7 +11,7 @@
 if node['platform_version'].to_i >= 6.0
   # Install epel 6 signing key.
   execute "Install epel" do
-    command "rpm -Uvh http://ftp.linux.ncsu.edu/pub/epel/6/i386/epel-release-6-7.noarch.rpm"
+    command "rpm -Uvh ftp://rpmfind.net/linux/epel/6/x86_64/epel-release-6-8.noarch.rpm"
     not_if "rpm -qa epel-release | grep epel-release"
   end
 
